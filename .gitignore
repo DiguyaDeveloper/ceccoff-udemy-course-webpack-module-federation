@@ -1,0 +1,24 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore environment variables file
+.env
+
+# Ignore logs
+logs
+*.log
+
+# Ignore build output
+dist/
+build/
+
+# Ignore local configuration files
+config/
+
+# Ignore dependencies installed by npm
+package-lock.json
+
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
