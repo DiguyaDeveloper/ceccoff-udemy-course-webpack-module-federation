@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "build:dev": "webpack --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "DiguyaDeveloper",
   "license": "ISC",
   "dependencies": {
     "webpack": "^5.89.0",
