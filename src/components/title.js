@@ -1,4 +1,4 @@
-
+import './title.css';
 
 export default class Title {
     create(title) {
