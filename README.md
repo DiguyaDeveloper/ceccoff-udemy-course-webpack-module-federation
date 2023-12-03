@@ -30,9 +30,12 @@ Este repositório foi criado para auxiliar no acompanhamento do curso e fornecer
 
 Sinta-se à vontade para contribuir para este repositório. Se você encontrar erros, deseja adicionar mais recursos ou compartilhar seu próprio projeto baseado no curso, abra uma **issue** ou envie um **pull request**.
 
-## Requisitos
+## Pré-requisitos e Configuração
 
-Antes de começar, certifique-se de ter o Node.js instalado em sua máquina, pois será necessário para executar os exemplos e projetos do curso.
+Antes de começar, certifique-se de ter os seguintes pré-requisitos instalados:
+
+- [Node.js LTS](https://nodejs.org/) - Necessário para executar os exemplos e projetos do curso.
+- [Visual Studio Code](https://code.visualstudio.com/) - Recomendado como ambiente de desenvolvimento.
 
 ## Instruções de Uso
 
