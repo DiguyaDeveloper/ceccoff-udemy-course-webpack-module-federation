@@ -1,6 +1,9 @@
 # Ignore node_modules directory
 node_modules/
 
+# Ignore course assets directory
+assets/
+
 # Ignore environment variables file
 .env
 
