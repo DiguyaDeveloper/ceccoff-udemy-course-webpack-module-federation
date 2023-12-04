@@ -17,6 +17,17 @@ module.exports = {
                 use: ["file-loader"],
             },
             { test: /\.scss$/, use: ["style-loader", "css-loader", "sass-loader"] },
+            {
+                test: /\.m?js/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-env"],
+                        plugins: ['@babel/plugin-proposal-object-rest-spread']
+                    },
+                },
+            },
         ],
     },
 };
