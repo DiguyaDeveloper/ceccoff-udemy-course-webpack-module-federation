@@ -1,6 +1,8 @@
 import Title from './components/title/title';
 import Image from './components/image';
 import Button from './components/button/button';
+import Warning from './templates/warning.html';
+import './templates/warning.css';
 
 const title = new Title();
 
@@ -13,3 +15,6 @@ image.insertImage();
 const button = new Button();
 
 button.create();
+
+const body = document.querySelector('body');
+body.innerHTML += Warning;
