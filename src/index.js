@@ -3,10 +3,11 @@ import Image from './components/image';
 import Button from './components/button/button';
 import Warning from './templates/warning.html';
 import './templates/warning.css';
+import PhraseTxt from './files/file.txt';
 
 const title = new Title();
 
-title.create();
+title.create("Teste do titulo");
 
 const image = new Image();
 
@@ -17,4 +18,6 @@ const button = new Button();
 button.create();
 
 const body = document.querySelector('body');
+body.innerHTML += PhraseTxt;
 body.innerHTML += Warning;
+
