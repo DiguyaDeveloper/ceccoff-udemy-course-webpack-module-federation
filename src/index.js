@@ -1,4 +1,4 @@
-import Title from './components/title';
+import Title from './components/title/title';
 
 import Image from './components/image';
 
