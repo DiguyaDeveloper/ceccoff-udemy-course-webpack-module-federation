@@ -7,15 +7,12 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, './dist'),
-        publicPath: 'http://localhost:9001/'
+        publicPath: 'http://localhost:9003/'
     },
     mode: 'development',
     devServer: {
-        port: 9001,
+        port: 9003,
         historyApiFallback: true
-    },
-    resolve: {
-        extensions: ['.jsx', '.js', '.json']
     },
     module: {
         rules: [
@@ -37,6 +34,9 @@ module.exports = {
             filename: 'index.html',
             template: './public/index.html',
         })
-    ]
+    ],
+    resolve: {
+        extensions: ['.jsx', '.js', '.json']
+    },
 }
 

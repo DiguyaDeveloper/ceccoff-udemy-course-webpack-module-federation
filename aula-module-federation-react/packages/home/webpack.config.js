@@ -7,7 +7,7 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, './dist'),
-        publicPath: 'http://localhost:9002'
+        publicPath: 'http://localhost:9002/'
     },
     mode: 'development',
     devServer: {
@@ -35,8 +35,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './public/index.html',
-            title: 'App'
+            template: './public/index.html'
         })
     ]
 }
