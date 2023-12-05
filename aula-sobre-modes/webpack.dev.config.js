@@ -6,10 +6,16 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     entry: "./src/index.js",
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "./dist"),
         filename: "bundle.js",
     },
     mode: 'development',
+    devServer: {
+        port: 8000,
+        historyApiFallback: {
+            index: 'index.html'
+        }
+    },
     module: {
         rules: [
             {
@@ -19,10 +25,13 @@ module.exports = {
         ],
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            title: 'Modes'
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         }),
-        new HtmlWebpackPlugin(),
     ]
 };
