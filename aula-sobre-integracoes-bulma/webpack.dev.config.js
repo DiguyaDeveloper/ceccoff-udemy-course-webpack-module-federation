@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     entry: "./src/index.js",
     output: {
-        path: path.resolve(__dirname, "./dist"),
+        path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
     },
     mode: 'development',
@@ -19,14 +19,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(ttf|woff|woff2)$/,
-                loader: 'url-loader',
-            },
-            {
-                test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
-            },
-            {
                 test: /\.scss$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
@@ -35,7 +27,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            title: 'Integrações'
+            title: 'Integrações Bulma'
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
