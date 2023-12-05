@@ -13,12 +13,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bulma": "^0.9.4",
     "jquery": "^3.7.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
+    "bulma": "^0.9.4",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
