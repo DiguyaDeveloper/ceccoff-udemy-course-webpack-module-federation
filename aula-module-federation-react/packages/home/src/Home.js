@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Button } from 'reactstrap';
-
 const Home = () => {
     return (
         <div>
@@ -9,7 +7,7 @@ const Home = () => {
             <hr className='my-2' />
             <p>Este comente é de outro APP!</p>
             <p className='lead'>
-                <Button color='primary'>Botão</Button>
+                <button color='primary' onClick={() => { }}>Botão</button>
             </p>
         </div>
     );

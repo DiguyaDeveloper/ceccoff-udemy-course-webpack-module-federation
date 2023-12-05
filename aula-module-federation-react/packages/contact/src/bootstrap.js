@@ -1,5 +1,12 @@
 import Contact from './Contact';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(<Contact />, document.querySelector("#root"));
+const root = document.getElementById('root');
+
+const createRoot = ReactDOM.createRoot || ReactDOM.unstable_createRoot;
+
+const rootElement = createRoot(root);
+
+rootElement.render(<Contact />);

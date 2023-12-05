@@ -12,7 +12,7 @@ module.exports = {
     mode: 'development',
     devServer: {
         port: 9001,
-        historyApiFallback: true
+        historyApiFallback: true,
     },
     resolve: {
         extensions: ['.jsx', '.js', '.json']
@@ -36,6 +36,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './public/index.html',
+        }),
+        new ModuleFederationPlugin({
+            name: "App",
+            remotes: {
+                HomeApp: "HomeApp@http://localhost:9002/remoteEntry.js",
+                ContactApp: "ContactApp@http://localhost:9003/remoteEntry.js"
+            }
         })
     ]
 }

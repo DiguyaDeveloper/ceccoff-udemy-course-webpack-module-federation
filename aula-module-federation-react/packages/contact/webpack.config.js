@@ -33,6 +33,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './public/index.html',
+        }),
+        new ModuleFederationPlugin({
+            name: "ContactApp",
+            filename: 'remoteEntry.js',
+            exposes: {
+                './ContactPage': './src/Contact'
+            }
         })
     ],
     resolve: {

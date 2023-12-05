@@ -1,23 +1,32 @@
-import React, { Suspense } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Navbar, Nav, NavItem } from "reactstrap";
+import React, { lazy, Suspense } from "react";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import "./app.css";
 
 const App = () => {
+  const HomePage = lazy(() => import("HomeApp/HomePage"));
+  const ContactPage = lazy(() => import("ContactApp/ContactPage"));
+
   return (
     <Router>
-      <div>
-        <Navbar color="light" light expand="md">
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <Link to="/">Home</Link>
-            </NavItem>
-            <NavItem>
+      <header>
+        <h1>Teste</h1>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/home">Home</Link>
+            </li>
+            <li>
               <Link to="/contact">Contact</Link>
-            </NavItem>
-          </Nav>
-        </Navbar>
-      </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <Routes>
+          <Route path="/home" element={<Suspense fallback={<div>Loading...</div>}><HomePage /></Suspense>} />
+          <Route path="/contact" element={<Suspense fallback={<div>Loading...</div>}><ContactPage /></Suspense>} />
+        </Routes>
+      </main>
     </Router>
   );
 };
