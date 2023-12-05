@@ -7,7 +7,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <NavBar color="light" light expand="md">
+        <Navbar color="light" light expand="md">
           <Nav className="mr-auto" navbar>
             <NavItem>
               <Link to="/">Home</Link>
@@ -16,7 +16,7 @@ const App = () => {
               <Link to="/contact">Contact</Link>
             </NavItem>
           </Nav>
-        </NavBar>
+        </Navbar>
       </div>
     </Router>
   );
