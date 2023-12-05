@@ -9,7 +9,8 @@ module.exports = {
         filename: "[name].js"
     },
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true
     },
     module: {
         rules: [
