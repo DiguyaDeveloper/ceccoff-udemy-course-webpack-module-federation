@@ -9,11 +9,10 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         publicPath: 'http://localhost:9001'
     },
+    mode: 'development',
     devServer: {
-        contentBase: path.resolve(__dirname, './dist'),
-        index: 'index.html',
         port: 9001,
-        historyFallbackApi: true
+        historyApiFallback: true
     },
     resolve: {
         extensions: ['.jsx', '.js', '.json']
@@ -21,10 +20,10 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx/,
+                test: /\.jsx?/,
                 loader: require.resolve("babel-loader"),
                 options: {
-                    preset: [require.resolve("@babel/preset-react")]
+                    presets: [require.resolve("@babel/preset-react")]
                 }
             },
             {
@@ -32,6 +31,13 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './public/index.html',
+            title: 'App'
+        })
+    ]
 }
 
