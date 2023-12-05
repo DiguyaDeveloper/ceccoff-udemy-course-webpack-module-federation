@@ -1,7 +1,7 @@
 {
   "presets": [
     [
-      "@babel/presets-env",
+      "@babel/preset-env",
       {
         "modules": false,
         "targets": {

@@ -8,13 +8,11 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
+        publicPath: '/'
     },
     mode: 'development',
     devServer: {
-        port: 8000,
-        historyApiFallback: {
-            index: 'index.html'
-        }
+        historyApiFallback: true
     },
     module: {
         rules: [
@@ -22,12 +20,16 @@ module.exports = {
                 test: /\.scss$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
+            {
+                test: /\.js$/,
+                use: 'babel-loader',
+            },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'public/index.html'),
             filename: 'index.html',
-            title: 'Integrações Bulma'
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
