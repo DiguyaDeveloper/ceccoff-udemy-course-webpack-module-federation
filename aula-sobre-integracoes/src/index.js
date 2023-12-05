@@ -1,3 +1,6 @@
+
+
+import './fonts.css';
 import $ from 'jquery';
 
 const body = $('body');
